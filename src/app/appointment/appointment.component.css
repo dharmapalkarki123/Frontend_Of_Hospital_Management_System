@@ -1,0 +1,18 @@
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left-to-right 20s linear infinite;
+}
+h2{
+ text-align: center;
+  color: blueviolet;
+}
