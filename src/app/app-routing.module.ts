@@ -8,7 +8,7 @@ const routes: Routes = [
 {path:'admin',component:AdmindashComponent},
 { path:'appointment',component:AppointmentComponent},
 { path:'create-appointment',component:CreateAppointmentComponent},
-{ path: '', redirectTo: '/appointment', pathMatch: 'full' }
+
 
 ]
 

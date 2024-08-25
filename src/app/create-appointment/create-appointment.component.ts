@@ -12,7 +12,8 @@ export class CreateAppointmentComponent {
 
 appointment:Appointment=new Appointment();
 
-constructor(private appointmentService:AppointmentService, private router:Router){}
+constructor(private appointmentService :AppointmentService, private router:Router){}
+
 
 saveAppointment(){
   this.appointmentService.createAppointment(this.appointment).subscribe(data=>{

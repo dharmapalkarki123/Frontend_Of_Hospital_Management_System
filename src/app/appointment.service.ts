@@ -11,7 +11,7 @@ export class AppointmentService {
   constructor(private httpClient:HttpClient) { }
 
 
-  private baseUrl="http://localhost:8086/api/v1"
+  private baseUrl="http://localhost:8086/api/v1/appointments"
 
 getAppointmentList():Observable<Appointment[]>{
   return this.httpClient.get<Appointment[]>(`${this.baseUrl}`);
@@ -23,7 +23,9 @@ createAppointment(appointment:Appointment):Observable<Appointment>{
 }
 
 
-
+deleteAppointment(id:number):Observable<object>{
+  return this.httpClient.delete(`${this.baseUrl}/${id}`);
+}
 
 
 

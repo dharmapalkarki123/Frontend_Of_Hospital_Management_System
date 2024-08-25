@@ -30,15 +30,19 @@
             <th>Age</th>
             <th>Symptoms</th>
             <th>Contact Number</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let appointment of appointments">
-            <td>{{appointment .id }}</td>
+            <td>{{appointment.id }}</td>
             <td>{{ appointment.name }}</td>
             <td>{{ appointment.age }}</td>
             <td>{{ appointment.symptoms }}</td>
             <td>{{ appointment.number }}</td>
+            <td>
+              <button (click)="delete(appointment.id)" class="btn btn-danger">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>
