@@ -36,11 +36,9 @@
             <th>ID</th>
             <th>Name</th>
             <th>Age</th>
-            <th>Blood Group</th>
-            <th>Prescription</th>
-            <th>Dose</th>
             <th>Fees</th>
             <th>Urgency</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -48,11 +46,11 @@
             <td>{{ patient.id }}</td>
             <td>{{ patient.name }}</td>
             <td>{{ patient.age }}</td>
-            <td>{{ patient.blood }}</td>
-            <td>{{ patient.prescription }}</td>
-            <td>{{ patient.dose }}</td>
             <td>{{ patient.fees }}</td>
             <td>{{ patient.urgency }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="delete(patient.id)">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>

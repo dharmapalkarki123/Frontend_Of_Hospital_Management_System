@@ -10,9 +10,13 @@ export class PatientService {
   constructor(private httpClient:HttpClient) { }
 
 
-  private baseUrl="http://localhost:8086/api/v0"
+  private baseUrl="http://localhost:8086/api/v0/patients"
  
   getPatientList():Observable<Patient[]>{
    return this.httpClient.get<Patient[]>(`${this.baseUrl}`);
  }
+
+ deletePatient(id:number):Observable<object>{
+  return this.httpClient.delete(`${this.baseUrl}/${id}`);
+}
 }
