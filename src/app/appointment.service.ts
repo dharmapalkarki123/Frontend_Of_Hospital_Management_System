@@ -18,7 +18,7 @@ getAppointmentList():Observable<Appointment[]>{
 }
 
  
-createAppointment(appointment:Appointment):Observable<Appointment>{
+createAppointment(appointment:Appointment):Observable<Object>{
   return this.httpClient.post<Appointment>(`${this.baseUrl}`,appointment);
 }
 

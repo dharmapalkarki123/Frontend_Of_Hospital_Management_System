@@ -14,17 +14,20 @@ appointment:Appointment=new Appointment();
 
 constructor(private appointmentService :AppointmentService, private router:Router){}
 
+ngOnInit(): void{}
 
 saveAppointment(){
   this.appointmentService.createAppointment(this.appointment).subscribe(data=>{
     console.log(data);
     this.goToAppointment();
-  })
-}
+  },
+);
+} 
 
 
 
   onSubmit(){
+    console.log(this.appointment);
     this.saveAppointment();
 
   }
