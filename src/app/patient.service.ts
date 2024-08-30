@@ -19,4 +19,9 @@ export class PatientService {
  deletePatient(id:number):Observable<object>{
   return this.httpClient.delete(`${this.baseUrl}/${id}`);
 }
+  createPatient(patient:Patient):Observable<Object>{
+    return this.httpClient.post<Patient>(`${this.baseUrl}`,patient);
+  }
+
+
 }

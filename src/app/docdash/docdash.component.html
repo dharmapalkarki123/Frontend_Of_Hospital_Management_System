@@ -10,7 +10,7 @@
     
       
       <li class="nav-item">
-        <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/createpatient">Add Patient</a>
+        <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/create-patient">Add Patient</a>
       </li>
       
       <li class="nav-item">
@@ -54,7 +54,10 @@
       <th>Name</th>
       <th>Age</th>
       <th>Blood type</th>
+      <th>Prescription</th>
+      <th>Dose</th>
       <th>Urgency</th>
+      <th>Doctor</th>
     
     </tr>
   </thead>
@@ -64,10 +67,12 @@
       <td>{{patient.name}}</td>
       <td>{{patient.age}}</td>
       <td>{{patient.blood}}</td>
-      
-      
-      
+      <td>{{patient.prescription}}</td>
+      <td>{{patient.dose}}</td>
       <td>{{patient.urgency}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="delete(patient.id)">Delete</button>
+      </td>
   
     </tr>
   </tbody>
