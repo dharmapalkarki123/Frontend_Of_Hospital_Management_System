@@ -14,7 +14,7 @@
       </li>
       
       <li class="nav-item">
-        <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/medicinelist">View Medicines</a>
+        <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/medicine-list">View Medicines</a>
       </li>
 
       
@@ -57,7 +57,7 @@
       <th>Prescription</th>
       <th>Dose</th>
       <th>Urgency</th>
-      <th>Doctor</th>
+      <th>Action</th>
     
     </tr>
   </thead>
@@ -71,7 +71,9 @@
       <td>{{patient.dose}}</td>
       <td>{{patient.urgency}}</td>
       <td>
-        <button class="btn btn-primary" (click)="delete(patient.id)">Delete</button>
+        <button class="btn btn-info" (click)="delete(patient.id)">Delete</button>
+        <button class="btn btn-danger" style="margin-left: 10px;" (click)="updatePatient(patient.id)">Update</button>
+        <button (click) = "viewPatient(patient.id)" class="btn btn-success" style="margin-left: 10px;">View</button>
       </td>
   
     </tr>

@@ -11,6 +11,12 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { DocdashComponent } from './docdash/docdash.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
+import { CreateMedicineComponent } from './create-medicine/create-medicine.component';
+import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
+import { UpdatePatientComponent } from './update-patient/update-patient.component';
+import { ViewPatientComponent } from './view-patient/view-patient.component';
+import { ViewMedicineComponent } from './view-medicine/view-medicine.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { CreatePatientComponent } from './create-patient/create-patient.componen
     CreateAppointmentComponent,
     HomeComponent,
     DocdashComponent,
-    CreatePatientComponent
+    CreatePatientComponent,
+    MedicineListComponent,
+    CreateMedicineComponent,
+    UpdateMedicineComponent,
+    UpdatePatientComponent,
+    ViewPatientComponent,
+    ViewMedicineComponent
   ],
   imports: [
     BrowserModule,
